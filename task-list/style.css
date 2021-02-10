@@ -1,0 +1,21 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#app {
+	height: auto;
+	margin: 4em;
+	background-color: rgb(221, 221, 221);
+}
+
+#app div:first {
+	padding: 2em;
+}
+
+li {
+	list-style: none;
+	background-color: white;
+	padding: 0.5em;
+	border: black 0.5px solid;
+	margin-bottom: 0.1em;
+}

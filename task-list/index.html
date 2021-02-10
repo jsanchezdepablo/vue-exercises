@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<div style="padding: 2em">
+				<h2>Lista de Tareas</h2>
+				<div>
+					<input v-on:keyup.enter="createTask" id="task" type="text" placeholder="Escribe una nueva tarea" />
+					<button v-on:click="createTask">Agregar</button>
+				</div>
+				<template>
+					<ul>
+						<li v-for="(task, index) in tasks">
+							<span v-html="task.name"></span>
+							<template>
+								<button v-on:click="completeTask(index)">Completar</button>
+								<button v-on:click="removeTask(index)">Eliminar</button>
+							</template>
+						</li>
+					</ul>
+				</template>
+			</div>
+		</div>
+		<script src="vue.js"></script>
+	</body>
+</html>
